@@ -1,0 +1,120 @@
+{
+  "name": "Motoko",
+  "scopeName": "source.motoko",
+  "fileTypes": ["motoko"],
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#types"
+    },
+    {
+      "include": "#operators"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#numbers"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash.motoko",
+          "match": "//.*$",
+          "captures": {
+            "0": {
+              "name": "punctuation.definition.comment.motoko"
+            }
+          }
+        },
+        {
+          "name": "comment.block.motoko",
+          "begin": "/\\*",
+          "end": "\\*/",
+          "captures": {
+            "0": {
+              "name": "punctuation.definition.comment.motoko"
+            }
+          }
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.motoko",
+          "match": "\\b(actor|class|func|import|let|loop|private|public|return|var|while|if|else|async|await|switch|case|break|try|catch|finally|throw|assert|for|in|continue|module|type|shared|stable|query)\\b"
+        }
+      ]
+    },
+    "types": {
+      "patterns": [
+        {
+          "name": "storage.type.motoko",
+          "match": "\\b(Bool|Char|Int|Int8|Int16|Int32|Int64|Nat|Nat8|Nat16|Nat32|Nat64|Float|Float32|Float64|Text|Blob|Principal|Array|List|Option|Result)\\b"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.motoko",
+          "match": "(!|\\$|%|&|\\*|\\-\\-|\\-|\\+=|\\+\\+|\\+|==|!=|<=|>=|<|>|&&|\\|\\||::|;|,|\\?|\\.|\\(|\\)|\\{|\\}|\\[|\\]|`|~)"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.motoko",
+          "begin": "\"",
+          "end": "\"",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.begin.motoko"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.end.motoko"
+            }
+          },
+          "patterns": [
+            {
+              "name": "constant.character.escape.motoko",
+              "match": "\\\\."
+            }
+          ]
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.integer.motoko",
+                "match": "\\b([0-9]+)\\b"
+    },
+    {
+      "name": "constant.numeric.float.motoko",
+      "match": "\\b([0-9]+\\.[0-9]+(?:[eE][\\+\\-]?[0-9]+)?)\\b"
+    },
+    {
+      "name": "constant.numeric.hexadecimal.motoko",
+      "match": "\\b0x[0-9a-fA-F]+\\b"
+    },
+    {
+      "name": "constant.numeric.binary.motoko",
+      "match": "\\b0b[01]+\\b"
+    }
+  ]
+}
+},
+"uuid": "5b5f5a5a-3d3d-4d4d-9d9d-8a8a8a8a8a8a"
+}
