@@ -15,7 +15,7 @@ This project provides a Prisma syntax highlighting file for the Motoko programmi
 ## Installation
 To use the custom Prisma highlight style file, follow the steps below:
 
-- Download the motoko-prisma-config.json file from this repository.
+- Download the motoko.json file from this repository.
 - Add the JSON file to the appropriate directory in your text editor or IDE, depending on its configuration and documentation.
 - Configure your text editor or IDE settings to use the custom Prisma highlight style file for Motoko files.
 
